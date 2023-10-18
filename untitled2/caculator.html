@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<input type="number" id="num1">
+<input type="number" id="num2">
+<button onclick="add()">Addition(+)</button>
+<button onclick="sub()">Subtraction(-)</button>
+<button onclick="mul()">Multiplication(X)</button>
+<button onclick="div()">Division(/)</button>
+<div id="result"></div>
+<script>
+    function add() {
+        let a = +document.getElementById("num1").value;
+        let b = +document.getElementById("num2").value;
+        let tong = a + b;
+        document.getElementById("result").innerHTML = "result: " + tong;
+    }
+
+    function sub() {
+        let c = +document.getElementById("num1").value;
+        let d = +document.getElementById("num2").value;
+        let tru = c - d;
+        document.getElementById("result").innerHTML = "result: " + tru;
+    }
+
+    function mul() {
+        let e = +document.getElementById("num1").value;
+        let f = +document.getElementById("num2").value;
+        let nhan = e * f;
+        document.getElementById("result").innerHTML = "result: " + nhan;
+    }
+
+    function div() {
+        let g = +document.getElementById("num1").value;
+        let h = +document.getElementById("num2").value;
+        let chia = g / h;
+        document.getElementById("result").innerHTML = "result: " + chia;
+    }
+</script>
+
+</body>
+</html>
