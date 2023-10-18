@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="đường kính" id="D">
+<button onclick="tinhchuVi()">Tính</button>
+<p id="result"> </p>
+<script>
+    function tinhchuVi(){
+        let D=+ document.getElementById("D").value;
+        let C= D*3.14;
+        document.getElementById("result").innerHTML= "result: " + C;
+    }
+</script>
+
+</body>
+</html>

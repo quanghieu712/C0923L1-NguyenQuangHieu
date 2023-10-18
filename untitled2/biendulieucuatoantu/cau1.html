@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="điểm môn vật lí "id="li">
+<input type="number" placeholder="điểm môn hoá học" id="Hoa">
+<input type="number" placeholder="điểm môn sinh học"id="Sinh">
+<button onclick="tinhdiemtrungBinh()">Tính điểm trung bình</button>
+<p id="result"></p>
+<script>
+    function tinhdiemtrungBinh(){
+        let lí  =+document.getElementById("li").value;
+        let Hoá =+document.getElementById("Hoa").value;
+        let Sinh=+document.getElementById("Sinh").value;
+        let tổng= (lí+Hoá+Sinh)/3 ;
+        document.getElementById("result").innerHTML= "result: " + tổng;
+
+
+    }
+
+
+
+</script>
+
+</body>
+</html>

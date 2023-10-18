@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="0C (celsius) " id="c">
+<button onclick="chuyendoinhietDo()">Nhập</button>
+<p id="result"></p>
+<script>
+    function chuyendoinhietDo(){
+    let doC =+document.getElementById("c").value;
+    let doF = (9 * doC/5)+32;
+    document.getElementById("result").innerHTML="Result: " + doF;
+    }
+</script>
+
+</body>
+</html>
