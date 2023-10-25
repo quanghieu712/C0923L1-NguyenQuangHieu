@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th> From Currency</th>
+            <th >To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" id="amount">
+            </td>
+            <td ><select id="from">
+                <option value="VND">VNĐ </option>
+                <option value="USD">USD</option>
+            </select>
+            </td>
+            <td >
+                <select id="to">
+                    <option value="VND">VNĐ</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="chuyendoi()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <p id="result"></p>
+    <script>
+        function chuyendoi() {
+            let amount = document.getElementById("amount").value;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            let result;
+            if (from == "USD" && to == "VND") {
+               result = amount * 23000;
+            }
+             else if (from == "VND" && to == "USD"){
+                result = amount / 23000;
+             }
+             else {
+                 result = amount;
+            }
+             document.getElementById("result").innerHTML = "Result " + result;
+        }
+    </script>
+</body>
+</html>
