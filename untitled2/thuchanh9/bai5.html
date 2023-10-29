@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="view">
+<table>
+    <tr>
+        <th><button type="button" name="so" value="1" onclick="input(this.value)">1</button> </th>
+        <th><button type="button" name="so" value="2" onclick="input(this.value)">2</button></th>
+        <th><button type="button" name="so" value="3" onclick="input(this.value)">3</button></th>
+        <th><button type="button" name="phep" value="+" onclick="input(this.value)">+</button></th>
+    </tr>
+    <tr>
+        <th><button type="button" name="so" value="4" onclick="input(this.value)">4</button></th>
+        <th><button type="button" name="so" value="5" onclick="input(this.value)">5</button></th>
+        <th><button type="button" name="so" value="6" onclick="input(this.value)">6</button></th>
+        <th><button type="button" name="phep" value="-" onclick="input(this.value)">-</button></th>
+    </tr>
+    <tr>
+        <th><button type="button" name="so" value="7" onclick="input(this.value)">7</button></th>
+        <th><button type="button" name="so" value="8" onclick="input(this.value)">8</button></th>
+        <th><button type="button" name="so" value="9" onclick="input(this.value)">9</button></th>
+        <th><button type="button" name="phep" value="*" onclick="input(this.value)">X</button></th>
+    </tr>
+    <tr>
+        <th><button type="button" name="ql" value="C" onclick="deleteInput()">C</button></th>
+        <th><button type="button" name="so" value="0" onclick="input(this.value)">0</button></th>
+        <th><button type="button" name="bang" value="=" onclick="result()">=</button></th>
+        <th><button type="button" name="phep" value="/" onclick="input(this.value)">/</button></th>
+    </tr>
+</table>
+<script>
+    let view = document.getElementById("view");
+function input(value){
+    view.value += value;
+}
+function deleteInput(){
+    view.value = "";
+}
+function result(){
+ let result = eval(view.value);
+ view.value = result;
+}
+
+</script>
+
+</body>
+</html>
